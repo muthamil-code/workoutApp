@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/main_screen_main_layout_padding"
+        android:orientation="vertical"
+        android:contentDescription="image">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/main_screen_image_height"
+            android:contentDescription="@string/image"
+            android:src="@drawable/work"
+            />
+<LinearLayout
+    android:id="@+id/llStart"
+    android:layout_width="@dimen/start_button_size"
+    android:layout_height="@dimen/start_button_size"
+    android:layout_marginTop="@dimen/start_button_margin_top"
+    android:gravity="center"
+    android:background="@drawable/border_ripple"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/start"
+        android:textSize="@dimen/start_button_label_textSize"
+        android:textColor="@color/colorPrimary"
+        android:gravity="center"
+        />
+
+</LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:baselineAligned="false"
+           
+
+             android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/bmiBtn"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="50dp"
+                    android:background="@drawable/item_circular_color_animation"
+                    >
+                    <TextView
+                        android:id="@+id/bmiText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="BMI"
+                        android:gravity="center"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"
+                        />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="CALCULATOR"
+                    android:layout_marginLeft="50dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorAccent"
+                    />
+
+
+
+                </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:baselineAligned="false"
+
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/bmiHistory"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="50dp"
+                    android:background="@drawable/item_circular_color_animation"
+                    >
+                    <TextView
+                        android:id="@+id/historyText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="his"
+                        android:gravity="center"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"
+                        />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="HISTORY"
+                    android:layout_marginLeft="55dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorAccent"
+                    />
+
+
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

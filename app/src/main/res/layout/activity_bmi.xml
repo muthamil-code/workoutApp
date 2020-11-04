@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BmiActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/bmi"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="#FFFFFF"
+        />
+
+    <RadioGroup
+        android:id="@+id/radio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       android:layout_below="@+id/bmi"
+        android:padding="10dp"
+        android:orientation="horizontal"
+        android:background="@drawable/drawable_raadio_group_background"
+        >
+        <RadioButton
+            android:id="@+id/rbMetricUnits"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:checked="true"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:text="METRIC UNITS"
+            android:textStyle="bold"
+            android:textColor="@drawable/drawable_text_color_selector"
+            android:button="@null"
+            android:background="@drawable/drawable_unit"
+            />
+        <RadioButton
+            android:id="@+id/rbUSUnits"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:checked="false"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:text="US UNITS"
+            android:textStyle="bold"
+            android:textColor="@drawable/drawable_text_color_selector"
+            android:button="@null"
+            android:background="@drawable/drawable_unit"
+            />
+
+    </RadioGroup>
+    <LinearLayout
+        android:layout_below="@id/radio"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tiMetricWeight"
+            android:layout_marginTop="30dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/weightId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="WEIGHT (in kg)"
+                android:inputType="numberDecimal"
+                android:textSize="16sp"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tiMetricHeight"
+        android:layout_marginTop="30dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/heightId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="HEIGHT (in cm)"
+            android:inputType="numberDecimal"
+            android:textSize="16sp"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+      <LinearLayout
+          android:id="@+id/llWeight"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          >
+
+          <com.google.android.material.textfield.TextInputLayout
+              android:id="@+id/llUnitWeight"
+              android:layout_marginTop="30dp"
+              style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+
+              <androidx.appcompat.widget.AppCompatEditText
+                  android:id="@+id/unitWeight"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:hint="weight"
+                  android:inputType="numberDecimal"
+                  android:textSize="16sp"
+                  />
+
+          </com.google.android.material.textfield.TextInputLayout>
+
+          <LinearLayout
+              android:id="@+id/llHeight"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal">
+
+              <com.google.android.material.textfield.TextInputLayout
+                  android:id="@+id/heightFeet"
+                  android:layout_marginTop="30dp"
+                  style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                  android:layout_width="0dp"
+                  android:layout_weight="1"
+                  android:layout_marginEnd="5dp"
+                  android:layout_height="wrap_content"
+                  android:layout_marginRight="5dp">
+
+
+                  <androidx.appcompat.widget.AppCompatEditText
+                      android:id="@+id/feet"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:hint="feet"
+                      android:inputType="numberDecimal"
+                      android:textSize="16sp"
+                      />
+
+              </com.google.android.material.textfield.TextInputLayout>
+              <com.google.android.material.textfield.TextInputLayout
+                  android:id="@+id/heightCM"
+                  android:layout_marginTop="30dp"
+                  style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                  android:layout_width="0dp"
+                  android:layout_weight="1"
+                  android:layout_marginEnd="5dp"
+                  android:layout_height="wrap_content"
+                  android:layout_marginRight="5dp">
+
+
+                  <androidx.appcompat.widget.AppCompatEditText
+                      android:id="@+id/inch"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:hint="inch"
+                      android:inputType="numberDecimal"
+                      android:textSize="16sp"
+                      />
+
+              </com.google.android.material.textfield.TextInputLayout>
+
+
+          </LinearLayout>
+
+      </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/liBmiVisible"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/bmiId"
+                android:layout_marginTop="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="YOUR BMI"
+
+                android:gravity="center"
+                android:textSize="20sp"
+                />
+            <TextView
+                 android:id="@+id/bmiValueId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="15.0"
+                />
+
+            <TextView
+                android:id="@+id/bmiType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="NORMAL"
+                android:gravity="center"
+                android:textSize="20sp"
+                />
+            <TextView
+                 android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Normal"
+                android:gravity="center"
+                android:textSize="20sp"
+                />
+
+        </LinearLayout>
+
+
+
+        <Button
+            android:id="@+id/btnCalculate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorAccent"
+            android:text="CALCULATE"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+
+    </LinearLayout>
+</RelativeLayout>
